@@ -195,15 +195,15 @@ fun NoteCardView(note: Note, onDeleteClick: (Note) -> Unit) {
             elevation = CardDefaults.elevatedCardElevation(4.dp),
             colors = CardDefaults.cardColors()
         ) {
-            Column {
+            Column(modifier = Modifier.padding(8.dp)) {
                 Text(
                     text = note.title,
-                    modifier = Modifier.padding(8.dp).fillMaxWidth(),
+                    modifier = Modifier.padding(vertical = 4.dp).fillMaxWidth(),
                     style = MaterialTheme.typography.bodyMedium
                 )
                 Text(
                     text = note.content,
-                    modifier = Modifier.padding(8.dp).fillMaxWidth(),
+                    modifier = Modifier.padding(vertical = 4.dp).fillMaxWidth(),
                     style = MaterialTheme.typography.bodySmall,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis

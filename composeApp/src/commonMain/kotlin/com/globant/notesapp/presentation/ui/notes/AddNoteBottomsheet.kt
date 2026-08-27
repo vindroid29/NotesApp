@@ -47,7 +47,7 @@ import org.koin.compose.viewmodel.koinViewModel
 @Composable
 fun AddNoteScreen(bottomsheetState: SheetState, onDismiss: () -> Unit) {
     val noteListViewModel = koinViewModel<NoteListViewModel>()
-    ModalBottomSheet(modifier = Modifier.wrapContentSize().background(Color.Blue), sheetState = bottomsheetState, sheetGesturesEnabled = false, onDismissRequest = onDismiss) {
+    ModalBottomSheet(modifier = Modifier.wrapContentSize().background(Color.Transparent), sheetState = bottomsheetState, sheetGesturesEnabled = false, onDismissRequest = onDismiss) {
         AddNoteContent(
             onSaveNote = { title, content ->
                 noteListViewModel.upsertNote(
